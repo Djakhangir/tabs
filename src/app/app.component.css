@@ -1,0 +1,19 @@
+.dataset-name{
+    border-width: 0px;
+    width: 1150px;
+    background: inherit;
+    background-color: rgba(250, 250, 250, 1);
+    border: none;
+    border-radius: 5px;
+    box-shadow: none;
+    padding-top: 7px;
+    height: 30px;
+}
+
+.box{
+    width: 1120px;
+    height: 500px;
+    border:1px solid grey;
+    margin:15px;
+    border-radius:10px;
+}
