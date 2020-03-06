@@ -42,9 +42,10 @@ expand:boolean
     this.datasetName = this.DataName();
   }
 
-  expandCurrentTab(tab:string){
+  expandCurrentTab(index: number){
     // this.store.dispatch(new datasetActions[tab](true));
-    let el = this.myElement.nativeElement.ownerDocument.getElementById('tab5').scrollIntoView({behavior:"smooth"})
+    const el = document.getElementById('tab' + index)
+    el.scrollIntoView({behavior:"smooth"})
   }
 
   DataSetName(title){

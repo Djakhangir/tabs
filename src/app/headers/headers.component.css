@@ -30,3 +30,8 @@
     padding-left: 10px;
     color: #C1AE87;
 }
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
