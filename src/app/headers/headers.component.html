@@ -1,20 +1,18 @@
-<div>
+<div class="row">
     <div style="margin-left: 15px; margin-top: 10px; margin-bottom: 15px;" class="ingestion-wizard">Wizard
         <img src="another.png" style="width: 20px; height: 20px; margin-left: 22px; float: right;">
     </div>
     <div class="dataset-name" style="margin-left: 15px;"> <span style="margin-left: 15px; font-size: 14px; color: #797979;"> Dataset Name: </span>
         <span [hidden]="dataset-name == 'undefined'" class="ingestion-wizard" style="font-size: 18px;">{{datasetName}}</span>
      </div>
-     <div style="margin-top: 70px;" >
-     <div [ngClass]="{'active': crd.isActive}" style="height: 70px;" *ngFor="let crd of graphInfo; let i = index">
-        <div class="panels" (click)="expandCurrentTab(crd.panelName)">
-            <div class="tile-color tabs" [id]="'tab'+1">{{crd.title}} <hr style="width:200px"></div>
+     <div style="margin-top: 70px;" class="row" >
+        <div [ngClass]="{'active': crd.isActive}" style="height: 70px;" *ngFor="let crd of graphInfo; let i = index">
+            <div class="panels" (click)="expandCurrentTab(i+1)">
+                <div class="tile-color tabs">{{crd.title}} <hr style="width:200px"></div>
+            </div>
+        </div>
+        <div style="padding: 5px; padding-left: 145px; margin-left: -80px">
+            <span style="font-size:12px; color:#797979"></span>
         </div>
     </div>
-    <div style="padding: 5px; padding-left: 145px; margin-left: -80px">
-        <span style="font-size:12px; color:#797979"></span>
-    </div>
-    </div>
-
-    
 </div>

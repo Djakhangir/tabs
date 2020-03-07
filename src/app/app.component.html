@@ -1,22 +1,37 @@
 <app-headers></app-headers>
 
-<div class="dataset-name" id="tab1" *ngIf="panelOneExpanded == false; else datasetDefinition" style="margin-left: 15px;margin-top:20px; cursor: pointer;"><span style="margin-left: 15px; font-size: 14px; color:#797979">Dataset Definition</span>
-  <img src="someimage.png" style="width:20px; height:20px; margin-right: 35px; float: right;" (click)="makePanelOneExpanded()">
-</div>
-
-<ng-template #datasetDefinition>
-  <div class="box" *ngIf="panelOneExpanded == true || panelThreeExpanded == true && panelTwoExpanded == true">
-    <div style = "margin-top: 10px; margin-left: 15px; cursor: pointer; color: #C1AE87">Dataset Definition <img src="somePic.png" style="width:20px; height:20px; margin-right: 35px; float: right;" (click)="makePanelOneExpanded()"></div>
+<div [ngClass]="{'box':panelOneExpanded}">
+  <div class="dataset-name" id="tab1" style = "margin-top: 10px; margin-left: 15px; cursor: pointer; color: #C1AE87">
+    <span style="margin-left: 15px; font-size: 14px; color:#797979">Dataset Definition</span>
+    <img src="somePic.png" style="width:20px; height:20px; margin-right: 35px; float: right;" (click)="makePanelOneExpanded()">
+    <p *ngIf="panelOneExpanded === true">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae nulla nec ex interdum ultricies. Morbi faucibus lectus libero, nec posuere velit bibendum tristique. Vestibulum placerat ligula nec gravida laoreet. In tristique lectus nulla, et ultrices eros mattis et. Vivamus et sollicitudin nisl, sit amet auctor mauris. Suspendisse tellus quam, auctor vel tempor hendrerit, congue non turpis. Duis sit amet velit bibendum, rutrum dolor eget, dictum metus. Integer fringilla lectus et dolor ultricies, in sodales elit posuere. Sed hendrerit id sapien eget feugiat. Nullam quis nulla sed felis euismod gravida. Proin pharetra molestie elit, tempor scelerisque lorem porta eget. Curabitur molestie, ante non feugiat ornare, orci ligula varius dolor, ut blandit leo quam sed urna. Curabitur purus lorem, dapibus nec mauris eu, placerat aliquet nunc. In auctor mattis odio, ac venenatis nulla. In tincidunt arcu ac tristique finibus.
+  
+      Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi cursus, risus quis tincidunt porttitor, sem ante finibus augue, bibendum tempus mi risus nec leo. Nullam iaculis arcu quam, et lobortis est sagittis eget. Curabitur augue metus, feugiat a lobortis in, egestas non diam. Nulla faucibus, erat quis malesuada facilisis, nunc orci finibus felis, non commodo sem est nec massa. Maecenas sed nibh condimentum tellus lacinia rutrum id eget neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis justo a dolor ornare tincidunt at ut quam. Donec bibendum eu sapien vel dapibus.
+  
+      Donec tristique mollis diam ac sollicitudin. Donec consequat orci eget dui maximus volutpat. Etiam diam magna, pulvinar sit amet erat viverra, fermentum mattis dui. Curabitur tristique lacus quam, quis imperdiet libero rutrum sit amet. Duis iaculis tortor tellus, ac sodales dui auctor sit amet. Pellentesque aliquam nibh et varius elementum. Suspendisse mollis vel metus et bibendum. Nulla laoreet sapien vitae cursus elementum. Fusce vel mauris imperdiet, commodo risus sed, vehicula risus. Fusce lacinia velit eu nibh commodo vehicula. Vestibulum mauris mauris, feugiat nec hendrerit a, vulputate sit amet lacus. Nulla vitae lacus bibendum, consectetur sapien nec, sollicitudin nunc.
+  
+      Morbi suscipit porta est a suscipit. Donec pharetra consequat metus, ut tempus nunc rutrum eu. Nunc in dolor a nibh egestas aliquam id in ante. Fusce augue ex, malesuada vitae tincidunt at, sagittis eu nisl. Curabitur a augue ipsum. Aliquam ac nulla volutpat, bibendum ante iaculis, viverra ligula. Etiam diam orci, maximus eget molestie eget, accumsan vel nunc.
+  
+      Pellentesque id semper nibh. Sed consectetur nisl ut auctor imperdiet. Nunc pretium ipsum lacus, at feugiat dolor ornare nec. Nam pretium consectetur justo, in convallis urna porttitor id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam volutpat eget augue eget sodales. Mauris consectetur molestie elit eget imperdiet. Sed consectetur vulputate mauris, id aliquam est rhoncus at. Mauris aliquet velit sed sem hendrerit, in efficitur quam aliquet. In eu nisl vestibulum, imperdiet ipsum vel, dapibus purus. Donec id bibendum enim. Pellentesque sagittis, odio a placerat ullamcorper, felis erat dignissim magna, sed porttitor nulla augue a eros.
+    </p>
   </div>
-</ng-template>
+</div>
 
 <div class="dataset-name" id="tab2" *ngIf="panelTwoExpanded == false; else technicalSchema" style="margin-left: 15px;margin-top:20px; cursor: pointer;"><span style="margin-left: 15px; font-size: 14px; color:#797979">Technical Schema</span>
   <img src="someimage.png" style="width:20px; height:20px; margin-right: 35px; float: right;" (click)="makePanelTwoExpanded()">
 </div>
 
 <ng-template #technicalSchema>
-  <div class="box" *ngIf="panelTwoExpanded == true || panelThreeExpanded == true && panelFourExpanded == true">
-    <div style = "margin-top: 10px; margin-left: 15px; cursor: pointer; color: #C1AE87">Technical Schema <img src="somePic.png" style="width:20px; height:20px; margin-right: 35px; float: right;" (click)="makePanelTwoExpanded()"></div>
+  <div class="box" id="tab2">
+    <div style = "margin-top: 10px; margin-left: 15px; cursor: pointer; color: #C1AE87">Technical Schema <img src="somePic.png" style="width:20px; height:20px; margin-right: 35px; float: right;" (click)="makePanelTwoExpanded()">
+    <p>      Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi cursus, risus quis tincidunt porttitor, sem ante finibus augue, bibendum tempus mi risus nec leo. Nullam iaculis arcu quam, et lobortis est sagittis eget. Curabitur augue metus, feugiat a lobortis in, egestas non diam. Nulla faucibus, erat quis malesuada facilisis, nunc orci finibus felis, non commodo sem est nec massa. Maecenas sed nibh condimentum tellus lacinia rutrum id eget neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis justo a dolor ornare tincidunt at ut quam. Donec bibendum eu sapien vel dapibus.
+
+      Donec tristique mollis diam ac sollicitudin. Donec consequat orci eget dui maximus volutpat. Etiam diam magna, pulvinar sit amet erat viverra, fermentum mattis dui. Curabitur tristique lacus quam, quis imperdiet libero rutrum sit amet. Duis iaculis tortor tellus, ac sodales dui auctor sit amet. Pellentesque aliquam nibh et varius elementum. Suspendisse mollis vel metus et bibendum. Nulla laoreet sapien vitae cursus elementum. Fusce vel mauris imperdiet, commodo risus sed, vehicula risus. Fusce lacinia velit eu nibh commodo vehicula. Vestibulum mauris mauris, feugiat nec hendrerit a, vulputate sit amet lacus. Nulla vitae lacus bibendum, consectetur sapien nec, sollicitudin nunc.
+
+      Morbi suscipit porta est a suscipit. Donec pharetra consequat metus, ut tempus nunc rutrum eu. Nunc in dolor a nibh egestas aliquam id in ante. Fusce augue ex, malesuada vitae tincidunt at, sagittis eu nisl. Curabitur a augue ipsum. Aliquam ac nulla volutpat, bibendum ante iaculis, viverra ligula. Etiam diam orci, maximus eget molestie eget, accumsan vel nunc.
+
+      Pellentesque id semper nibh. Sed consectetur nisl ut auctor imperdiet. Nunc pretium ipsum lacus, at feugiat dolor ornare nec. Nam pretium consectetur justo, in convallis urna porttitor id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam volutpat eget augue eget sodales. Mauris consectetur molestie elit eget imperdiet. Sed consectetur vulputate mauris, id aliquam est rhoncus at. Mauris aliquet velit sed sem hendrerit, in efficitur quam aliquet. In eu nisl vestibulum, imperdiet ipsum vel, dapibus purus. Donec id bibendum enim. Pellentesque sagittis, odio a placerat ullamcorper, felis erat dignissim magna, sed porttitor nulla augue a eros.</p></div>
   </div>
 </ng-template>
 
@@ -25,8 +40,15 @@
 </div>
 
 <ng-template #validationSchema>
-  <div class="box" *ngIf="panelThreeExpanded == true || panelOneExpanded == true && panelFourExpanded == true && panelTwoExpanded == true">
-    <div style = "margin-top: 10px; margin-left: 15px; cursor: pointer; color: #C1AE87">Validation <img src="somePic.png" style="width:20px; height:20px; margin-right: 35px; float: right;" (click)="makePanelThreeExpanded()"></div>
+  <div class="box" id="tab3">
+    <div style = "margin-top: 10px; margin-left: 15px; cursor: pointer; color: #C1AE87">Validation <img src="somePic.png" style="width:20px; height:20px; margin-right: 35px; float: right;" (click)="makePanelThreeExpanded()">
+    <p>      Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi cursus, risus quis tincidunt porttitor, sem ante finibus augue, bibendum tempus mi risus nec leo. Nullam iaculis arcu quam, et lobortis est sagittis eget. Curabitur augue metus, feugiat a lobortis in, egestas non diam. Nulla faucibus, erat quis malesuada facilisis, nunc orci finibus felis, non commodo sem est nec massa. Maecenas sed nibh condimentum tellus lacinia rutrum id eget neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis justo a dolor ornare tincidunt at ut quam. Donec bibendum eu sapien vel dapibus.
+
+      Donec tristique mollis diam ac sollicitudin. Donec consequat orci eget dui maximus volutpat. Etiam diam magna, pulvinar sit amet erat viverra, fermentum mattis dui. Curabitur tristique lacus quam, quis imperdiet libero rutrum sit amet. Duis iaculis tortor tellus, ac sodales dui auctor sit amet. Pellentesque aliquam nibh et varius elementum. Suspendisse mollis vel metus et bibendum. Nulla laoreet sapien vitae cursus elementum. Fusce vel mauris imperdiet, commodo risus sed, vehicula risus. Fusce lacinia velit eu nibh commodo vehicula. Vestibulum mauris mauris, feugiat nec hendrerit a, vulputate sit amet lacus. Nulla vitae lacus bibendum, consectetur sapien nec, sollicitudin nunc.
+
+      Morbi suscipit porta est a suscipit. Donec pharetra consequat metus, ut tempus nunc rutrum eu. Nunc in dolor a nibh egestas aliquam id in ante. Fusce augue ex, malesuada vitae tincidunt at, sagittis eu nisl. Curabitur a augue ipsum. Aliquam ac nulla volutpat, bibendum ante iaculis, viverra ligula. Etiam diam orci, maximus eget molestie eget, accumsan vel nunc.
+
+      Pellentesque id semper nibh. Sed consectetur nisl ut auctor imperdiet. Nunc pretium ipsum lacus, at feugiat dolor ornare nec. Nam pretium consectetur justo, in convallis urna porttitor id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam volutpat eget augue eget sodales. Mauris consectetur molestie elit eget imperdiet. Sed consectetur vulputate mauris, id aliquam est rhoncus at. Mauris aliquet velit sed sem hendrerit, in efficitur quam aliquet. In eu nisl vestibulum, imperdiet ipsum vel, dapibus purus. Donec id bibendum enim. Pellentesque sagittis, odio a placerat ullamcorper, felis erat dignissim magna, sed porttitor nulla augue a eros.</p></div>
   </div>
 </ng-template>
 
@@ -35,8 +57,16 @@
 </div>
 
 <ng-template #schedulingSchema>
-  <div class="box" *ngIf="panelFourExpanded == true || panelOneExpanded == true && panelFourExpanded == true && panelTwoExpanded == true">
-    <div style = "margin-top: 10px; margin-left: 15px; cursor: pointer; color: #C1AE87">Scheduling & Governance <img src="somePic.png" style="width:20px; height:20px; margin-right: 35px; float: right;" (click)="makePanelFourExpanded()"></div>
+  <div class="box" id="tab4" >
+    <div style = "margin-top: 10px; margin-left: 15px; cursor: pointer; color: #C1AE87">Scheduling & Governance <img src="somePic.png" style="width:20px; height:20px; margin-right: 35px; float: right;" (click)="makePanelFourExpanded()"><p>
+      Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi cursus, risus quis tincidunt porttitor, sem ante finibus augue, bibendum tempus mi risus nec leo. Nullam iaculis arcu quam, et lobortis est sagittis eget. Curabitur augue metus, feugiat a lobortis in, egestas non diam. Nulla faucibus, erat quis malesuada facilisis, nunc orci finibus felis, non commodo sem est nec massa. Maecenas sed nibh condimentum tellus lacinia rutrum id eget neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis justo a dolor ornare tincidunt at ut quam. Donec bibendum eu sapien vel dapibus.
+
+      Donec tristique mollis diam ac sollicitudin. Donec consequat orci eget dui maximus volutpat. Etiam diam magna, pulvinar sit amet erat viverra, fermentum mattis dui. Curabitur tristique lacus quam, quis imperdiet libero rutrum sit amet. Duis iaculis tortor tellus, ac sodales dui auctor sit amet. Pellentesque aliquam nibh et varius elementum. Suspendisse mollis vel metus et bibendum. Nulla laoreet sapien vitae cursus elementum. Fusce vel mauris imperdiet, commodo risus sed, vehicula risus. Fusce lacinia velit eu nibh commodo vehicula. Vestibulum mauris mauris, feugiat nec hendrerit a, vulputate sit amet lacus. Nulla vitae lacus bibendum, consectetur sapien nec, sollicitudin nunc.
+
+      Morbi suscipit porta est a suscipit. Donec pharetra consequat metus, ut tempus nunc rutrum eu. Nunc in dolor a nibh egestas aliquam id in ante. Fusce augue ex, malesuada vitae tincidunt at, sagittis eu nisl. Curabitur a augue ipsum. Aliquam ac nulla volutpat, bibendum ante iaculis, viverra ligula. Etiam diam orci, maximus eget molestie eget, accumsan vel nunc.
+
+      Pellentesque id semper nibh. Sed consectetur nisl ut auctor imperdiet. Nunc pretium ipsum lacus, at feugiat dolor ornare nec. Nam pretium consectetur justo, in convallis urna porttitor id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam volutpat eget augue eget sodales. Mauris consectetur molestie elit eget imperdiet. Sed consectetur vulputate mauris, id aliquam est rhoncus at. Mauris aliquet velit sed sem hendrerit, in efficitur quam aliquet. In eu nisl vestibulum, imperdiet ipsum vel, dapibus purus. Donec id bibendum enim. Pellentesque sagittis, odio a placerat ullamcorper, felis erat dignissim magna, sed porttitor nulla augue a eros.
+    </p></div>
   </div>
 </ng-template>
 
@@ -45,8 +75,15 @@
 </div>
 
 <ng-template #publish>
-  <div class="box" *ngIf="panelFiveExpanded == true || panelOneExpanded == true && panelFourExpanded == true && panelTwoExpanded == true">
-    <div style = "margin-top: 10px; margin-left: 15px; cursor: pointer; color: #C1AE87">Publish <img src="somePic.png" style="width:20px; height:20px; margin-right: 35px; float: right;" (click)="makePanelFiveExpanded()"></div>
+  <div class="box" id="tab5">
+    <div style = "margin-top: 10px; margin-left: 15px; cursor: pointer; color: #C1AE87">Publish <img src="somePic.png" style="width:20px; height:20px; margin-right: 35px; float: right;" (click)="makePanelFiveExpanded()">
+    <p>      Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi cursus, risus quis tincidunt porttitor, sem ante finibus augue, bibendum tempus mi risus nec leo. Nullam iaculis arcu quam, et lobortis est sagittis eget. Curabitur augue metus, feugiat a lobortis in, egestas non diam. Nulla faucibus, erat quis malesuada facilisis, nunc orci finibus felis, non commodo sem est nec massa. Maecenas sed nibh condimentum tellus lacinia rutrum id eget neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis justo a dolor ornare tincidunt at ut quam. Donec bibendum eu sapien vel dapibus.
+
+      Donec tristique mollis diam ac sollicitudin. Donec consequat orci eget dui maximus volutpat. Etiam diam magna, pulvinar sit amet erat viverra, fermentum mattis dui. Curabitur tristique lacus quam, quis imperdiet libero rutrum sit amet. Duis iaculis tortor tellus, ac sodales dui auctor sit amet. Pellentesque aliquam nibh et varius elementum. Suspendisse mollis vel metus et bibendum. Nulla laoreet sapien vitae cursus elementum. Fusce vel mauris imperdiet, commodo risus sed, vehicula risus. Fusce lacinia velit eu nibh commodo vehicula. Vestibulum mauris mauris, feugiat nec hendrerit a, vulputate sit amet lacus. Nulla vitae lacus bibendum, consectetur sapien nec, sollicitudin nunc.
+
+      Morbi suscipit porta est a suscipit. Donec pharetra consequat metus, ut tempus nunc rutrum eu. Nunc in dolor a nibh egestas aliquam id in ante. Fusce augue ex, malesuada vitae tincidunt at, sagittis eu nisl. Curabitur a augue ipsum. Aliquam ac nulla volutpat, bibendum ante iaculis, viverra ligula. Etiam diam orci, maximus eget molestie eget, accumsan vel nunc.
+
+      Pellentesque id semper nibh. Sed consectetur nisl ut auctor imperdiet. Nunc pretium ipsum lacus, at feugiat dolor ornare nec. Nam pretium consectetur justo, in convallis urna porttitor id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam volutpat eget augue eget sodales. Mauris consectetur molestie elit eget imperdiet. Sed consectetur vulputate mauris, id aliquam est rhoncus at. Mauris aliquet velit sed sem hendrerit, in efficitur quam aliquet. In eu nisl vestibulum, imperdiet ipsum vel, dapibus purus. Donec id bibendum enim. Pellentesque sagittis, odio a placerat ullamcorper, felis erat dignissim magna, sed porttitor nulla augue a eros.</p></div>
   </div>
 </ng-template>
 

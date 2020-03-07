@@ -19,11 +19,11 @@ panelFiveExpanded: boolean;
 constructor() {}
 
 ngOnInit() {
-  this.panelOneExpanded=this.panelOneExpanded=true
-  this.panelTwoExpanded=this.panelTwoExpanded=false
-  this.panelThreeExpanded=this.panelThreeExpanded=false
-  this.panelFourExpanded=this.panelFourExpanded=false
-  this.panelFiveExpanded=this.panelFiveExpanded=false
+  this.panelOneExpanded=true
+  this.panelTwoExpanded=false
+  this.panelThreeExpanded=true
+  this.panelFourExpanded=true
+  this.panelFiveExpanded=true
 
 }
 
